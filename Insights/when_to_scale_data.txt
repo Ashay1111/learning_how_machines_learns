@@ -1,0 +1,10 @@
+Note: Why Feature Scaling is Necessary for SVR but Not for Random Forest
+
+Support Vector Regression (SVR):
+Feature scaling is essential in SVR because it relies on distances and dot products in the feature space. If features have different ranges, the optimization process becomes biased toward features with larger magnitudes, leading to suboptimal performance. Scaling ensures that all features contribute equally to the computation of distances and kernel transformations.
+
+Random Forest Regression (RFR):
+In contrast, Random Forest does not require feature scaling. It works by splitting data based on thresholds (e.g., x > 5), which are unaffected by the scale or range of features. Since decision trees treat each feature independently, the algorithm is inherently robust to differences in feature magnitudes.
+
+Key Takeaway:
+Feature scaling is critical for distance-based algorithms (e.g., SVR, KNN, Logistic Regression) but unnecessary for tree-based models (e.g., Random Forest, Decision Trees).
